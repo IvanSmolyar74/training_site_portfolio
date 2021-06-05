@@ -31,9 +31,11 @@
   position: absolute;
   background: #fff;
   width: 100vw;
-  height: 150%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transform: translateY(-200%);
   transition: all 0.3s ease 0s;
-  top: -200%;
 }
 
 .section-header__navigation__mobile ul {
@@ -430,7 +432,7 @@
   }
 
   .section-header__navigation__mobile.active {
-    top: 0;
+    transform: translateY(0);
   }
   .section-header__info-lang {
     display: none;
@@ -454,9 +456,10 @@
     color: #000000;
   }
 
-  .section-skills__main-skill:not(:nth-last-child(1)) {
-    margin-bottom: 81px;
+  .section-skills__main-skill:not(:last-child) {
+    margin-bottom: 80px;
   }
+  
   .section-portfolio {
     padding-top: 80px;
     padding-bottom: 0;
@@ -465,7 +468,7 @@
   .section-portfolio__works-case {
     margin-bottom: 30px;
   }
-  .section-portfolio__works-case:nth-last-child(1) {
+  .section-portfolio__works-case:last-child(1) {
     margin-bottom: 0;
   }
   .section-portfolio__works-case__img {
